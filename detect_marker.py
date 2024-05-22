@@ -70,10 +70,10 @@ def main(_image_name):
     rx = f"{roll:.3f}"
     ry = f"{pitch:.3f}"
     rz = f"{yaw:.3f}"
-    X = str(tvec[0] * 1000)
-    Y = str(tvec[1] * 1000)
-    Z = str(tvec[2] * 1000)
-    print(f"标定板的位置是(RPY): {X}, {Y}, {Z}, {rx}, {ry}, {rz}")
+    X = tvec[0] * 1000
+    Y = tvec[1] * 1000
+    Z = tvec[2] * 1000
+    print(f"标定板的位置是(RPY): {X[0]}, {Y[0]}, {Z[0]}, {rx}, {ry}, {rz}")
     cv2.waitKey(0)
 
 
